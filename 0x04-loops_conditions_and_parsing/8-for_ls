@@ -2,5 +2,5 @@
 #Bash script that displays the content of cwd, in list format, only the part after the first dash
 list="$(ls)"
 for file in "$list"; do
-	ls $file | cut -d- -f2
+	find $file | cut -d- -f2
 done
