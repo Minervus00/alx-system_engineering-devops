@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Bash script that displays the content of cwd, in list format, only the part after the first dash
-list="$(ls)"
+list="$(ls -1)"
 for file in $list; do
-	find $file | cut -d- -f2 
+	find "$file" | cut -d- -f2 
 done
