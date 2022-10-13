@@ -2,7 +2,7 @@
 #Bash script that displays the time for 12 hours and 59 minutes.
 hour=0
 min=60
-while [[ $hour -ne 12 || $min -ne 60 ]]
+while [[ $hour -ne 13 || $min -ne 60 ]]
 do
 	if ((min == 60))
 	then
