@@ -8,9 +8,9 @@ else
 	echo "$fname file exists"
 	if [ ! -s "$fname" ]
 	then
-		echo "$fname is empty"
+		echo "$fname file is empty"
 	else
-		echo "$fname is not empty"
+		echo "$fname file is not empty"
 	fi
 	if [ -f "$fname" ]
 	then
