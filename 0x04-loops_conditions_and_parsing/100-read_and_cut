@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 #Bash script that displays the content of the file /etc/passwd
+#IFS = Internal File Separator
+#done < {fname} redirects the file to read command
+#'_'avoid unused variables
 file="/etc/passwd"
 while IFS=: read -r f1 _ f3 _ _ f6 _
 do
