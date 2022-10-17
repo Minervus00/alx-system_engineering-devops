@@ -4,9 +4,6 @@ c=1
 while [[$c -ne 0]]
 do
 	echo "To infinity and beyond"
-	if ((c % 2 == 0))
-	then
-		sleep 2
-	fi
+	sleep 2
 	((c++))
 done
