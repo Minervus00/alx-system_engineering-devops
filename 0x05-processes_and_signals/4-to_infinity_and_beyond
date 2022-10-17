@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that displays To infinity and beyond indefinitely
-c=1
-while [[ $c -ne 0 ]]
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
-	((c++))
 done
