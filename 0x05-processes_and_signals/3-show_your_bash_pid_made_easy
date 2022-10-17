@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that displays lines containing the bash word
 # shellcheck disable=SC2009
-echo $BASHPID 'bash'
-var="$(pidof 3-show_your_bash_pid_made_easy)"
-echo $var 'bash'
+pgrep bash -l
