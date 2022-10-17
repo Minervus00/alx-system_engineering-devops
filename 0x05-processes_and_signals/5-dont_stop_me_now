@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Bash script that  stops 4-to_infinity_and_beyond process
+# Bash script that stops 4-to_infinity_and_beyond process
 # Use two terminals
+kill -9 `4-to_infinity_and_beyong`
