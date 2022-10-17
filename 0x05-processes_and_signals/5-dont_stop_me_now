@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that stops 4-to_infinity_and_beyond process using kill
 # Use two terminals
-sudo kill -9 `4-to_infinity_and_beyong`
+kill -9 `pidof 4-to_infinity_and_beyong`
