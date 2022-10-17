@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that displays To infinity and beyond indefinitely
 # With a delay of 2s between each iteration
-trap 'echo "I am invincible!!!"'
+trap 'echo I am invincible!!!'
 while true
 do
 	echo "To infinity and beyond"
