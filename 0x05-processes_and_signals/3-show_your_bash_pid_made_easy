@@ -2,4 +2,5 @@
 # Bash script that displays lines containing the bash word
 # shellcheck disable=SC2009
 echo $BASHPID 'bash'
-echo `pidof 3-show_your_bash_pid_made_easy` 'bash'
+var="$(pidof 3-show_your_bash_pid_made_easy)"
+echo $var 'bash'
