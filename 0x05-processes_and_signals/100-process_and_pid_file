@@ -4,8 +4,8 @@
 # SIGINT -> ctrl+C
 pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
 trap 'echo Y U no love me?!' SIGINT
-trap 'rm /var/run/myscript.pid' SIGQUIT SIGTERM
-trap 'echo I hate the kill command; exit' SIGTERM
+trap 'rm /var/run/myscript.pid' SIGQUIT
+trap 'echo I hate the kill command; rm /var/run/myscript.pid; exit' SIGTERM
 
 while true
 do
