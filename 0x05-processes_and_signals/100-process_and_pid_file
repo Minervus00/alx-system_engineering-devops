@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bash script that displays To infinity and beyond indefinitely
+# With a delay of 2s between each iteration
+# SIGINT -> ctrl+C
+pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
+trap 'echo I hate the kill command' SIGTERM
+trap 'echo Y U no love me?!' SIGINT
+trap 'rm /var/run/myscript.pid' SIGQUIT SIGTERM
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

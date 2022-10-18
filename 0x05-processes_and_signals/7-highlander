@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that displays To infinity and beyond indefinitely
+# and diplays I am invincible!!! when it receives a SIGTERM
 # With a delay of 2s between each iteration
 trap 'echo I am invincible!!!' SIGTERM
 while true
