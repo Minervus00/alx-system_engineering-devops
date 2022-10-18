@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Bash script that stops 7-highlander process
+# Bash script that sends a SIGTERM to 7-highlander process
 # Use two terminals
 pkill -f 7-highlander
