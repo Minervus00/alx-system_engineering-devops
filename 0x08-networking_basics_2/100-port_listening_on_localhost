@@ -3,4 +3,4 @@
 # In terminal 0: run ./100* and in terminal 1: telnet localhost 98
 # All things typed in tem1 will appear in term 0
 # Use ctrl+C in term 0 to close connection
-nc -l -s localhost -p 98
+nc -l localhost 98
