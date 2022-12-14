@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Run Apache on the holbertonschool/265-0 Docker container with 'Hello Holberton' message.
 echo "Hello Holberton" >> /etc/apache2.conf
-service apache2 start
+sudo service apache2 start
