@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
+# Script to block all incoming tcp ports except specific ports
 
+ufw default deny incomming
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
+ufw enable
