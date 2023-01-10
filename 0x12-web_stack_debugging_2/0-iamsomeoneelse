@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Runs whoami command
+if [[ $# -eq 0 ]]
+then 
+	whoami
+else
+	echo $1
+fi
