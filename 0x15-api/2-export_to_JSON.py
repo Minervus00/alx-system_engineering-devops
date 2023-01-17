@@ -11,15 +11,14 @@ if __name__ == "__main__":
     userInfo = requests.get(url_v).json()
 
     url_v = 'https://jsonplaceholder.typicode.com/todos'
-    todos = requests.get(url_v).json()
+    todos = requests.get(url_v, params={"userId": userId}).json()
     lst = []
     for td in todos:
-        if td.get("userId") == userInfo.get("id"):
-            lst.append({
-                "task": td.get("title"),
-                "completed": td.get("completed"),
-                "username": userInfo.get("username")}
-                )
+        lst.append({
+            "task": td.get("title"),
+            "completed": td.get("completed"),
+            "username": userInfo.get("username")}
+            )
 
     filename = str(userId) + ".json"
     with open(filename, 'a', encoding='utf-8') as f:
