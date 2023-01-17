@@ -2,6 +2,7 @@
 """Script that gather data from an api"""
 
 if __name__ == "__main__":
+    import json
     import requests
     from sys import argv
 
@@ -21,5 +22,5 @@ if __name__ == "__main__":
             )
 
     filename = str(userId) + ".json"
-    with open(filename, 'a', encoding='utf-8') as f:
-        f.write(str({str(userId): lst}))
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump({userId: lst}, f)
