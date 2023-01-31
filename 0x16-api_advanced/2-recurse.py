@@ -19,6 +19,5 @@ def top_ten(subreddit):
         for ch in child:
             print(ch['data']['title'])
         if child:
-            print(None)
             return
     print(None)
