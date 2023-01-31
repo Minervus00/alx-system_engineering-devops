@@ -8,7 +8,8 @@ def top_ten(subreddit):
     for a given subreddit"""
     resp = requests.get(
         'https://www.reddit.com/r/' + subreddit + '/top.json?limit=10',
-        headers={'User-agent': 'yourbot'}).json()
+        headers={'User-agent': 'yourbot'},
+        allow_redirects=False).json()
     # print(resp)
     data = resp.get('data', None)
     # print(data['children'][0]['data']['subreddit_subscribers'])
