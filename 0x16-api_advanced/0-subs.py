@@ -10,8 +10,10 @@ def number_of_subscribers(subreddit):
         headers={'User-agent': 'yourbot'}).json()
     # print(resp)
     data = resp.get('data', None)
-    print(data['children'][0]['data']['subreddit_subscribers'])
+    # print(data['children'][0]['data']['subreddit_subscribers'])
     if data is not None:
-        return (data['children'][0]['data']['subreddit_subscribers'])
-    else:
-        return (0)
+        child = data['children']
+        # print(child)
+        if child:
+            return (child[0]['data']['subreddit_subscribers'])
+    return (0)
