@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Configures an Nginx server so that /redirect_me redirects to another page.
-# The redirection is configured as a "301 Moved Permanently"
+#Redirection
 
+sudo apt-get update -y
+sudo apt-get install nginx -y
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
 SERVER_CONFIG=\
 "server {
