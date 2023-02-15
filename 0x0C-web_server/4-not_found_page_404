@@ -8,10 +8,10 @@ ufw allow "Nginx HTTP"
 ufw enable
 
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-echo -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/custom_404.html
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/custom_404.html
 SERVER_CONFIG=\
 "server {
-    listen 80 default_server;
+    listen 80;
     listen [::]:80 default_server;
     root   /var/www/html;
     index  index.html index.htm index.nginx-debian.html;
@@ -31,8 +31,4 @@ SERVER_CONFIG=\
 
 bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
 
-if [ "$(pgrep -c nginx)" -le 0 ]; then
-	sudo service nginx start
-else
-	sudo service nginx restart
-fi
+sudo service nginx restart
